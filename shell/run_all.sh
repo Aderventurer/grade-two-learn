@@ -1,14 +1,14 @@
 #!/bin/bash
-pwd
+
 echo "Running Python Hello World"
 python3 ./Python/helloworld.py
 
-pwd
 echo "Running C Hello World"
-gcc ./C/helloworld.c -o helloworld_c
-./helloworld_c
+mkdir ./C/build
+gcc ./C/helloworld.c -o ./C/build/helloworld_c
+./C/build/helloworld_c
 
-pwd
 echo "Running Rust Hello World"
-cd Rust/src
+cd Rust
 cargo run
+cd ..
