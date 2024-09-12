@@ -1,0 +1,4 @@
+*.o
+*.exe
+Rust/target/
+Rust/Cargo.lock
