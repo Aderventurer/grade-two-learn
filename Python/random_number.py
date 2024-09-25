@@ -16,11 +16,24 @@ def main():
     
     random_numbers = [random.random() for _ in range(n)]
     
-    print("生成的随机数:", random_numbers)
+    with open("random.txt", "w") as f:
+        for num in random_numbers:
+            f.write(f"{num}\n")
     
-    sorted_numbers = sorted(random_numbers)
+    print(f"生成的随机数已保存到 random.txt 文件.")
     
-    print("排序后的随机数:", sorted_numbers)
+    with open("random.txt", "r") as f:
+        random_numbers_from_file = [float(line.strip()) for line in f.readlines()]
+    
+    print(f"从 random.txt 文件中读取的随机数: {random_numbers_from_file}")
+    
+    sorted_numbers = sorted(random_numbers_from_file)
+    
+    with open("sorted.txt", "w") as f:
+        for num in sorted_numbers:
+            f.write(f"{num}\n")
+    
+    print(f"排序后的随机数已保存到 sorted.txt 文件.")
 
 if __name__ == "__main__":
     main()
