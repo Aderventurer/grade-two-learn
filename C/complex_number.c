@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 typedef struct
 {
@@ -56,8 +57,37 @@ Complex from_modulus_and_argument(double mod, double arg)
     return result;
 }
 
+int double_apporx_eq(double a, double b, double eps)
+{
+    double diff = fabs(a - b);
+    if (diff < eps)
+        return 1;
+    else
+        return 0;
+}
+
+void test_complex_add()
+{
+    Complex a = {3, 4};
+    Complex b = {1, 2};
+
+    Complex sum = add(a, b);
+
+    if (double_apporx_eq(sum.real, 4.0, 1e-12) == 0)
+    {
+        exit(-1);
+    }
+
+    if (double_apporx_eq(sum.imag, 6.0, 1e-12) == 0)
+    {
+        exit(-1);
+    }
+}
+
 int main()
 {
+    test_complex_add();
+
     Complex a = {3, 4};
     Complex b = {1, 2};
 
