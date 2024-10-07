@@ -5,10 +5,13 @@ python3 ./Python/complex_number.py
 
 echo "Running C Complex number"
 mkdir ./C/build
-gcc ./C/complex_number.c -o ./C/build/complex_number_c
-./C/build/complex_number_c
+cd C/build
+cmake ..
+make
+ctest
 
 echo "Running Rust Complex number"
+cd ../..
 cd Rust
 cd src
 cargo  test

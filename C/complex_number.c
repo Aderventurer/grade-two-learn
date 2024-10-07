@@ -183,7 +183,7 @@ void test_complex_conjugate()
 void test_from_modulus_and_argument()
 {
     double mod = 5;
-    double arg = atan2(3, 4);
+    double arg = atan2(4.0, 3.0);
 
     Complex a = from_modulus_and_argument(mod, arg);
     if (double_apporx_eq(a.real, 3.0, 1e-12) == 0)
@@ -205,7 +205,7 @@ int main()
     test_complex_modulus();
     test_complex_argument();
     test_complex_conjugate();
-    void test_from_modulus_and_argument();
+    test_from_modulus_and_argument();
 
     return 0;
 }
