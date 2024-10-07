@@ -92,22 +92,3 @@ if __name__ == '__main__':
 
     unittest.main()
 
-    a = Complex(3, 4) 
-    b = Complex(1, 2) 
-
-    sum_res = a.add(b)
-    print(f"Sum: {sum_res}")
-
-    quotient = a.divide(b)
-    print(f"Quotient: {quotient}")
-
-    mod = a.modulus()
-    arg = a.argument()
-    print(f"Modulus: {mod}, Argument: {arg} radians")
-
-    conj = a.conjugate()
-    print(f"Conjugate: {conj}")
-
-    from_mod_arg = Complex.from_modulus_and_argument(mod, arg)
-    print(f"From Modulus and Argument: {from_mod_arg}")
-

@@ -11,5 +11,5 @@ gcc ./C/complex_number.c -o ./C/build/complex_number_c
 echo "Running Rust Complex number"
 cd Rust
 cd src
-cargo run --bin complex_number
+cargo  test
 cd ..
