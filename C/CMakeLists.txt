@@ -8,3 +8,9 @@ add_executable(helloworld helloworld.c)
 
 add_executable(complex_number complex_number.c)
 add_test(NAME test_complex_number COMMAND ./complex_number)
+
+add_executable(stack stack.c)
+add_test(NAME test_stack COMMAND ./stack)
+
+add_executable(queue queue.c)
+add_test(NAME test_queue COMMAND ./queue)
