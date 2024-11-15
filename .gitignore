@@ -1,3 +1,4 @@
 Rust/target/
 Rust/Cargo.lock
 C/build
+.DS_Store

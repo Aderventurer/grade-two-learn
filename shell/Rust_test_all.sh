@@ -1,0 +1,2 @@
+cd Rust
+cargo test
