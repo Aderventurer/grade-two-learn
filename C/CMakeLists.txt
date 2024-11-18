@@ -14,3 +14,9 @@ add_test(NAME test_stack COMMAND ./stack)
 
 add_executable(queue queue.c)
 add_test(NAME test_queue COMMAND ./queue)
+
+add_executable(stack_list stack_list.c)
+add_test(NAME test_stack_list COMMAND ./stack_list)
+
+add_executable(queue_list queue_list.c)
+add_test(NAME test_queue_list COMMAND ./queue_list)
